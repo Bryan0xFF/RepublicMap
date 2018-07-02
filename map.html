@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="republicmap.js"></script>
+		<title>Map</title>
+		<script>
+
+$ (init);
+
+var theMap;
+
+function init ()
+{
+	theMap = new RepublicMap ('svgMap', onMapHover, onMapClick);
+}
+
+function onMapHover (which)
+{
+	console.log ('hovering ' + which);
+}
+
+function onMapClick (which)
+{
+	console.log ('clicked ' + which);
+}
+
+		</script>
+	</head>
+
+	<body>
+	<svg id="svgMap" width="600px" height="600px" viewBox="0 0 100 100" style="background-color:red">
+
+	</svg>
+	</body>
+</html>
