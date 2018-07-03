@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="javascripts/jquery 3.1.1.min.js"></script>
-	<script type="text/javascript" src="javascripts/republicmap.js"></script>
-	<link rel="stylesheet" href="css/style.css"/>
-    <title>Map</title>
-    <script>
-        $ (init);
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="javascripts/jquery 3.1.1.min.js"></script>
+        <script type="text/javascript" src="javascripts/republicmap.js"></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <title>Map</title>
+        <script>
+            $ (init);
+            $ (document).ready(adjustRepublicMapHeight);
+            $ (window).resize(adjustRepublicMapHeight);
 
-        var theMap;
+            var theMap;
 
-		function init () 
-		{
-            theMap = new RepublicMap ('svgMap', onMapHover, onMapClick);
-        }
+            function init () 
+            {
+                theMap = new RepublicMap ('svgMap', onMapHover, onMapClick);
+            }
 
-		function onMapHover (which) 
-		{
-            console.log ('hovering ' + which);
-        }
+            function onMapHover (which) 
+            {
+                console.log ('hovering ' + which);
+            }
 
-		function onMapClick (which) 
-		{
-            console.log ('clicked ' + which);
-        }
-    </script>
-</head>
+            function onMapClick (which) 
+            {
+                console.log ('clicked ' + which);
+            }
 
-<body>
-    <svg id = "svgMap" viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice" style="background-color:white"
-   		style="width: 100%; padding-bottom: 92%; height: 1px; overflow: visible"> 
-	
-	</svg>
-</body>
+            function adjustRepublicMapHeight () 
+            {
+                var newWidth= $ (window).height ()/$ (window).width ()*100;
+                $ ('#svgMap').css ('width', newWidth < 100 ? newWidth + '%': '100%');
+                console.log (newWidth);
+            }
+        </script>
+    </head>
+
+    <body>
+        <center>
+            <svg id = "svgMap" viewBox="0 0 100 100"  style="background-color:white;"></svg>
+        </center>
+    </body>
 
 </html>
