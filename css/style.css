@@ -1,20 +1,20 @@
-.__republicMap_hover {
+.__republicMapRegionHover {
     fill: yellow;
     stroke: aqua;
     stroke-width: 0mm;
     display: none;
 }
 
-.__republicMap_clicked {
+.__republicMapRegionClicked {
     fill: darkcyan;
     stroke: blueviolet;
-    stroke-width: 0ch;
+    stroke-width: 0mm;
     display: none;
 }
 
-.__republicMap_base {
+.__republicMapRegionBase {
     fill: brown;
     stroke: chartreuse;
-    stroke-width: 0pc;
+    stroke-width: 0mm;
     display: none;
 }
