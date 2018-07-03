@@ -1,20 +1,11 @@
-.__republicMapRegionHover {
-    fill: yellow;
-    stroke: aqua;
-    stroke-width: 0mm;
-    display: none;
+.__republicMapRegion 
+{
+    fill: #B1C9FF;
+    stroke: #f3f3f3;
+    stroke-width : .33px;
+    stroke-linecap:round;
+    stroke-linejoin:miter;
+    stroke-opacity:1;
+    pointer-events:all;
 }
 
-.__republicMapRegionClicked {
-    fill: darkcyan;
-    stroke: blueviolet;
-    stroke-width: 0mm;
-    display: none;
-}
-
-.__republicMapRegionBase {
-    fill: brown;
-    stroke: chartreuse;
-    stroke-width: 0mm;
-    display: none;
-}
