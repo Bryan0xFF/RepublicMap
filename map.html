@@ -6,17 +6,21 @@
         <script type="text/javascript" src="javascripts/jquery 3.1.1.min.js"></script>
         <script type="text/javascript" src="javascripts/republicmap.js"></script>
         <link rel="stylesheet" href="css/style.css"/>
-        <title>Map</title>
+        <title>Republic Map</title>
         <script>
+            
+            // Init RepublicMap
             $ (init);
-            $ (document).ready(adjustRepublicMapHeight);
-            $ (window).resize(adjustRepublicMapHeight);
+
+            // Set correct width for SVG
+            $ (document).ready (adjustRepublicMapWidth);
+            $ (window).resize (adjustRepublicMapWidth);
 
             var theMap;
 
             function init () 
             {
-                theMap = new RepublicMap ('svgMap', onMapHover, onMapClick);
+                theMap = new RepublicMap ('__svgRepublicMap', onMapHover, onMapClick);
             }
 
             function onMapHover (which) 
@@ -29,19 +33,26 @@
                 console.log ('clicked ' + which);
             }
 
-            function adjustRepublicMapHeight () 
+            /*
+                Set width based on height to keep aspect ratio.
+            */
+            function adjustRepublicMapWidth () 
             {
                 var newWidth= $ (window).height ()/$ (window).width ()*100;
-                $ ('#svgMap').css ('width', newWidth < 100 ? newWidth + '%': '100%');
-                console.log (newWidth);
+                $ ('#__svgRepublicMap').css ('width', newWidth < 100 ? newWidth + '%': '100%');
             }
+            
         </script>
     </head>
 
     <body>
+          
         <center>
-            <svg id = "svgMap" viewBox="0 0 100 100"  style="background-color:white;"></svg>
+            <svg id = "__svgRepublicMap" viewBox="0 0 100 100"  style="background-color:white;"></svg>
         </center>
+
+        
     </body>
+
 
 </html>

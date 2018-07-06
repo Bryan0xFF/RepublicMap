@@ -8,3 +8,18 @@
     stroke-opacity:1;
     pointer-events:all;
 }
+.__republicMapRegionCapital 
+{
+    fill:#f3f3f3;
+}
+
+
+.__tooltip 
+{
+    pointer-events : none; /*let mouse events pass through*/
+    visibility : hidden;
+    font-family : "sans-serif";
+    font-size : 2px;
+    fill :  red;
+}
+
