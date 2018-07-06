@@ -1,4 +1,3 @@
-
 /*
 	Create new RepublicMap object.
 	@param {svgId} SVG - Id of SVG container.
@@ -10,33 +9,29 @@
 	@param {string} colorDictionary [].clicked - The colors for the region when mouse pointer clicked it.
 */
 
-function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) 
-{
-	
+function RepublicMap(svgId, hoverCallback, clickCallback, colorDictionary) {
+
     this.__svgId = svgId;
     this.__hoverCallback = hoverCallback;
     this.__clickCallback = clickCallback;
 
-	this.__colorDictionary = colorDictionary;
+    this.__colorDictionary = colorDictionary;
 
-	// Check if colorDictionary is undefined, if true set default colors.
+    // Check if colorDictionary is undefined, if true set default colors.
 
-	if (colorDictionary == undefined)
-	{
-		this.__colorDictionary = [];
-		for (var idx = 1; idx <= 22; idx++) 
-		{
-			this.__colorDictionary[idx] = 
-			{
-				base : '#B1C9FF',
-				clicked : '#66C2A5',
-				hover : '#8DA0CB'
-			}
-		}
-	}
+    if (colorDictionary == undefined) {
+        this.__colorDictionary = [];
+        for (var idx = 1; idx <= 22; idx++) {
+            this.__colorDictionary[idx] = {
+                base: '#B1C9FF',
+                clicked: '#66C2A5',
+                hover: '#8DA0CB'
+            }
+        }
+    }
 
-	// SVG content
-	var __republicMapDom = `
+    // SVG content
+    var __republicMapDom = `
 		<g
 			transform="translate (0,-197)">
 			<path
@@ -353,67 +348,62 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary)
 			
 		</g>`;
 
-	// Insert SVG content into SVG container
-	$ ('#' + svgId).html (__republicMapDom);
+    // Insert SVG content into SVG container
+    $('#' + svgId).html(__republicMapDom);
 
-	// Set handlers for every region (polygon) in RepublicMap
-	for (var idx = 0; idx <= 22; idx++) 
-	{
-		registerMapHandlers (this, idx);
-	}
+    // Set handlers for every region (polygon) in RepublicMap
+    for (var idx = 0; idx <= 22; idx++) {
+        registerMapHandlers(this, idx);
+    }
 }
 
 /*
 	Function to execute for when mouse pointer enters any region (polygon) of RepulicMap.
 */
-RepublicMap.prototype.enterPolygon = function (which) 
-{
-	// Retrive objects
-	var region = $ ('#__republicMapDep' + which);
-	var regionTooltip = $ ("#__regionTooltip" + which);
+RepublicMap.prototype.enterPolygon = function(which) {
+    // Retrive objects
+    var region = $('#__republicMapDep' + which);
+    var regionTooltip = $("#__regionTooltip" + which);
 
-	region.css ('fill', this.__colorDictionary [which].hover);
-	
-	// Set tooltip content and show it.
-	regionTooltip.html (region.attr ('name'));
-	regionTooltip.css ("visibility", "visible");
+    region.css('fill', this.__colorDictionary[which].hover);
 
-	// Clear the other regions.
-	for (var idx = 1; idx <= 22; idx++) 
-	{
-		if (idx == which) continue;
-		$ ('#__republicMapDep' + idx).css ('fill', this.__colorDictionary [idx].base);
-		$ ('#__regionTooltip' + idx).css ("visibility", "hidden");
-	}
-	
-	// Run Callback
-    this.__hoverCallback (which);
+    // Set tooltip content and show it.
+    regionTooltip.html(region.attr('name'));
+    regionTooltip.css("visibility", "visible");
+
+    // Clear the other regions.
+    for (var idx = 1; idx <= 22; idx++) {
+        if (idx == which) continue;
+        $('#__republicMapDep' + idx).css('fill', this.__colorDictionary[idx].base);
+        $('#__regionTooltip' + idx).css("visibility", "hidden");
+    }
+    $("#names").html($("#__republicMapDep" + which).attr("name"));
+    // Run Callback
+    this.__hoverCallback(which);
 }
 
 /*
 	Function to execute for when mouse pointer clicks any region (polygon) of RepulicMap.
 */
-RepublicMap.prototype.clickPolygon = function (which) 
-{
-	// Retrive objects
-	var region = $ ('#__republicMapDep' + which);
-	var regionTooltip = $ ("#__regionTooltip" + which);
+RepublicMap.prototype.clickPolygon = function(which) {
+    // Retrive objects
+    var region = $('#__republicMapDep' + which);
+    var regionTooltip = $("#__regionTooltip" + which);
 
-	// Set tooltip content and show it.
-	region.css ('fill', this.__colorDictionary [which].clicked);
-	regionTooltip.html (region.attr ('name'));
-	regionTooltip.css ("visibility", "visible");
+    // Set tooltip content and show it.
+    region.css('fill', this.__colorDictionary[which].clicked);
+    regionTooltip.html(region.attr('name'));
+    regionTooltip.css("visibility", "visible");
 
-	// Clear the other regions.
-	for (var idx = 1; idx <= 22; idx++) 
-	{
-		if (idx == which) continue;
-		$ ('#__republicMapDep' + idx).css ('fill', this.__colorDictionary [idx].base);
-		$ ('#__regionTooltip' + idx).css ("visibility", "hidden");
-	}
+    // Clear the other regions.
+    for (var idx = 1; idx <= 22; idx++) {
+        if (idx == which) continue;
+        $('#__republicMapDep' + idx).css('fill', this.__colorDictionary[idx].base);
+        $('#__regionTooltip' + idx).css("visibility", "hidden");
+    }
 
-	// Run callback
-    this.__5clickCallback (which);
+    // Run callback
+    this.__5clickCallback(which);
 }
 
 /*
@@ -421,14 +411,11 @@ RepublicMap.prototype.clickPolygon = function (which)
 	@param {Object} map - RepublicMap object.
 	@param {number} which - Region id of 'map' to which register handlers.
  */
-function registerMapHandlers (map, which) 
-{
-	$ ('#__republicMapDep' + which).mouseenter (function () 
-	{
-        map.enterPolygon (which);
+function registerMapHandlers(map, which) {
+    $('#__republicMapDep' + which).mouseenter(function() {
+        map.enterPolygon(which);
     });
-	$ ('#__republicMapDep' + which).click (function () 
-	{
-        map.clickPolygon (which);
+    $('#__republicMapDep' + which).click(function() {
+        map.clickPolygon(which);
     });
 }

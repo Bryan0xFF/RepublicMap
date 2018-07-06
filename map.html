@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="javascripts/jquery 3.1.1.min.js"></script>
-        <script type="text/javascript" src="javascripts/republicmap.js"></script>
-        <link rel="stylesheet" href="css/style.css"/>
-        <title>Republic Map</title>
-        <script>
-            
-            // Init RepublicMap
-            $ (init);
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="javascripts/jquery 3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/republicmap.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Republic Map</title>
+    <script>
+        // Init RepublicMap
+        $(init);
 
-            // Set correct width for SVG
-            $ (document).ready (adjustRepublicMapWidth);
-            $ (window).resize (adjustRepublicMapWidth);
+        // Set correct width for SVG
+        $(document).ready(adjustRepublicMapWidth);
+        $(window).resize(adjustRepublicMapWidth);
 
-            var theMap;
+        var theMap;
 
-            function init () 
-            {
-                theMap = new RepublicMap ('__svgRepublicMap', onMapHover, onMapClick);
-            }
+        function init() {
+            theMap = new RepublicMap('__svgRepublicMap', onMapHover, onMapClick);
+        }
 
-            function onMapHover (which) 
-            {
-                console.log ('hovering ' + which);
-            }
+        function onMapHover(which) {
+            console.log('hovering ' + which);
+        }
 
-            function onMapClick (which) 
-            {
-                console.log ('clicked ' + which);
-            }
+        function onMapClick(which) {
+            console.log('clicked ' + which);
+        }
 
-            /*
-                Set width based on height to keep aspect ratio.
-            */
-            function adjustRepublicMapWidth () 
-            {
-                var newWidth= $ (window).height ()/$ (window).width ()*100;
-                $ ('#__svgRepublicMap').css ('width', newWidth < 100 ? newWidth + '%': '100%');
-            }
-            
-        </script>
-    </head>
+        /*
+            Set width based on height to keep aspect ratio.
+        */
+        function adjustRepublicMapWidth() {
+            var newWidth = $(window).height() / $(window).width() * 100;
+            $('#__svgRepublicMap').css('width', newWidth < 100 ? newWidth + '%' : '100%');
+        }
+    </script>
+</head>
 
-    <body>
-          
-        <center>
-            <svg id = "__svgRepublicMap" viewBox="0 0 100 100"  style="background-color:white;"></svg>
-        </center>
+<body>
 
-        
-    </body>
+    <center>
+        <div id="names"></div>
+        <svg id="__svgRepublicMap" viewBox="0 0 100 100" style="background-color:white;"></svg>
+    </center>
+
+
+</body>
 
 
 </html>
