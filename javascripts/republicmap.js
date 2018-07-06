@@ -1,15 +1,14 @@
-function RepublicMap (id, hoverCallback, clickCallback) 
-{
+function RepublicMap(id, hoverCallback, clickCallback) {
     this.svgId = id;
     this.hoverCallback = hoverCallback;
     this.clickCallback = clickCallback;
 
-	this.baseFill = '#B1C9FF';
-	this.clickedFill = '#66c2a5';
-	this.hoverFill = '#8DA0CB';
+    this.baseFill = '#B1C9FF';
+    this.clickedFill = '#66c2a5';
+    this.hoverFill = '#8DA0CB';
 
-	
-	var dom = `
+
+    var dom = `
 		<g
 			transform="translate (0,-197)">
 			<path
@@ -146,55 +145,49 @@ function RepublicMap (id, hoverCallback, clickCallback)
 			/>
 		</g>`;
 
-	$ ('#' + id).html (dom);
+    $('#' + id).html(dom);
 
-	for (var idx = 0; idx <= 22; idx++) 
-	{
-		/*$ ('#label' + idx).hide ();
-		$ ('#__republicMapDep' + idx + 'out').hide ();*/
-		registerMapHandlers (this, idx);
-	}
+    for (var idx = 0; idx <= 22; idx++) {
+        /*$ ('#label' + idx).hide ();
+        $ ('#__republicMapDep' + idx + 'out').hide ();*/
+        registerMapHandlers(this, idx);
+    }
 }
 
-RepublicMap.prototype.enterPolygon = function (which) 
-{
+RepublicMap.prototype.enterPolygon = function(which) {
     /*$ ('#__republicMapDep' + which).show ();
     $ ('#label' + which).show ();*/
-	for (var idx = 1; idx <= 22; idx++) 
-	{
+    for (var idx = 1; idx <= 22; idx++) {
         // $ ('#label' + idx).hide ();
-		$ ('#__republicMapDep' + idx).css ('fill', this.baseFill);
-		$ ('#__republicMapDep' + idx).css ('stroke-width', .33);
-	}
-	$ ('#__republicMapDep' + which).css ('fill', this.hoverFill);
-	$ ('#__republicMapDep' + which).css ('stroke-width', .93);
-    this.hoverCallback (which);
+        $('#__republicMapDep' + idx).css('fill', this.baseFill);
+        $('#__republicMapDep' + idx).css('stroke-width', .33);
+    }
+    $('#__republicMapDep' + which).css('fill', this.hoverFill);
+    $('#__republicMapDep' + which).css('stroke-width', .93);
+    $("#names").html($("#__republicMapDep" + which).attr("name"));
+    this.hoverCallback(which);
 }
 
-RepublicMap.prototype.clickPolygon = function (which) 
-{
+RepublicMap.prototype.clickPolygon = function(which) {
     /*$ ('#__republicMapDep' + which + 'out').show ();
     $ ('#label' + which).show ();*/
-	for (var idx = 1; idx <= 22; idx++) 
-	{
+    for (var idx = 1; idx <= 22; idx++) {
         // $ ('#label' + idx).hide ();
         // $ ('#label' + idx).hide ();
-		$ ('#__republicMapDep' + idx).css ('fill', this.baseFill);
-		$ ('#__republicMapDep' + idx).css ('stroke-width', .33);
-	}
-	$ ('#__republicMapDep' + which).css ('fill', this.clickedFill);
-	$ ('#__republicMapDep' + which).css ('stroke-width', .73);
-    this.clickCallback (which);
+        $('#__republicMapDep' + idx).css('fill', this.baseFill);
+        $('#__republicMapDep' + idx).css('stroke-width', .33);
+    }
+    $('#__republicMapDep' + which).css('fill', this.clickedFill);
+    $('#__republicMapDep' + which).css('stroke-width', .73);
+    $("#names").html($("#__republicMapDep" + which).attr("name"));
+    this.clickCallback(which);
 }
 
-function registerMapHandlers (map, which) 
-{
-	$ ('#__republicMapDep' + which).mouseenter (function () 
-	{
-        map.enterPolygon (which);
+function registerMapHandlers(map, which) {
+    $('#__republicMapDep' + which).mouseenter(function() {
+        map.enterPolygon(which);
     });
-	$ ('#__republicMapDep' + which).click (function () 
-	{
-        map.clickPolygon (which);
+    $('#__republicMapDep' + which).click(function() {
+        map.clickPolygon(which);
     });
 }
