@@ -369,7 +369,7 @@ RepublicMap.prototype.enterPolygon = function(which) {
 
     // Set tooltip content and show it.
     regionTooltip.html(region.attr('name'));
-    regionTooltip.css("visibility", "visible");
+	regionTooltip.css("font-family","Arial");
 
     // Clear the other regions.
     for (var idx = 1; idx <= 22; idx++) {
@@ -393,7 +393,6 @@ RepublicMap.prototype.clickPolygon = function(which) {
     // Set tooltip content and show it.
     region.css('fill', this.__colorDictionary[which].clicked);
     regionTooltip.html(region.attr('name'));
-    regionTooltip.css("visibility", "visible");
 
     // Clear the other regions.
     for (var idx = 1; idx <= 22; idx++) {
