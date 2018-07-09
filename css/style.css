@@ -14,7 +14,6 @@
     fill:#f3f3f3;
 }
 
-
 .__tooltip 
 {
     pointer-events : none; /*let mouse events pass through*/
