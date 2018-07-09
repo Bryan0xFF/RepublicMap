@@ -23,3 +23,19 @@
     fill :  red;
 }
 
+.__regionName 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+}
+
+.__regionCapital
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;    
+}
+
+span
+{
+    display: block;
+}
