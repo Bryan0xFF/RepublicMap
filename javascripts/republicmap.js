@@ -19,10 +19,13 @@ function RepublicMap(svgId, hoverCallback, clickCallback, colorDictionary) {
 
     // Check if colorDictionary is undefined, if true set default colors.
 
-    if (colorDictionary == undefined) {
+	if (colorDictionary == undefined) 
+	{
         this.__colorDictionary = [];
-        for (var idx = 1; idx <= 22; idx++) {
-            this.__colorDictionary[idx] = {
+		for (var idx = 1; idx <= 22; idx++) 
+		{
+			this.__colorDictionary[idx] = 
+			{
                 base: '#B1C9FF',
                 clicked: '#66C2A5',
                 hover: '#8DA0CB'
@@ -352,7 +355,8 @@ function RepublicMap(svgId, hoverCallback, clickCallback, colorDictionary) {
     $('#' + svgId).html(__republicMapDom);
 
     // Set handlers for every region (polygon) in RepublicMap
-    for (var idx = 0; idx <= 22; idx++) {
+	for (var idx = 0; idx <= 22; idx++) 
+	{
         registerMapHandlers(this, idx);
     }
 }
@@ -371,11 +375,13 @@ RepublicMap.prototype.enterPolygon = function(which) {
     regionTooltip.html(region.attr('name'));
 
     // Clear the other regions.
-    for (var idx = 1; idx <= 22; idx++) {
+	for (var idx = 1; idx <= 22; idx++)
+	{
         if (idx == which) continue;
         $('#__republicMapDep' + idx).css('fill', this.__colorDictionary[idx].base);
         $('#__regionTooltip' + idx).css("visibility", "hidden");
 	}
+
 	//set text to html top header
 	var name = $("#names").html($("#__republicMapDep" + which).attr("name"));
 	$(name).css("font-family","Arial");
@@ -413,10 +419,12 @@ RepublicMap.prototype.clickPolygon = function(which) {
 	@param {number} which - Region id of 'map' to which register handlers.
  */
 function registerMapHandlers(map, which) {
-    $('#__republicMapDep' + which).mouseenter(function() {
+	$('#__republicMapDep' + which).mouseenter(function() 
+	{
         map.enterPolygon(which);
     });
-    $('#__republicMapDep' + which).click(function() {
+	$('#__republicMapDep' + which).click(function() 
+	{
         map.clickPolygon(which);
     });
 }
