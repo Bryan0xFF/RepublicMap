@@ -195,7 +195,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 		<g
 			transform="translate (0,73.541665)">
 
-			<text x="40" y="3.5	" class="__tooltip" id="__regionTooltip1">Hello!</text>
+			<text x="40" y="3.3	" class="__tooltip" id="__regionTooltip1">Hello!</text>
 			<path
 			d="M 43.703497,6.1421159 42.86381,5.716811 42.037422,6.1674131 42.182434,5.237397 41.498518,4.5906997 42.427827,4.441223 l 0.403704,-0.8502831 0.429333,0.8376345 0.933419,0.1211935 -0.663967,0.6671632 z"
 			id="__republicMapRegionCapital1"
@@ -209,7 +209,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital2"
 			class="__republicMapRegionCapital" />
 
-			<text x="35.504749" y="7.3861728" class="__tooltip" id="__regionTooltip3">Hello!</text>
+			<text x="35.504749" y="9.3861728" class="__tooltip" id="__regionTooltip3">Hello!</text>
 			<circle
 			r="0.75"
 			cy="6.3861728"
@@ -217,7 +217,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital3"
 			class="__republicMapRegionCapital" />
 
-			<text x="30.17313" y="6.1123691" class="__tooltip" id="__regionTooltip4">Hello!</text>
+			<text x="30.17313" y="3.1123691" class="__tooltip" id="__regionTooltip4">Hello!</text>
 			<circle
 			r="0.75"
 			cy="5.1123691"
@@ -225,7 +225,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital4"
 			class="__republicMapRegionCapital" />
 
-			<text x="33.461605" y="13.936042" class="__tooltip" id="__regionTooltip5">Hello!</text>
+			<text x="33.461605" y="15.936042" class="__tooltip" id="__regionTooltip5">Hello!</text>
 			<circle
 			r="0.75"
 			cy="12.936042"
@@ -233,7 +233,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital5"
 			class="__republicMapRegionCapital" />
 
-			<text x="46.002419" y="13.811871" class="__tooltip" id="__regionTooltip6">Hello!</text>
+			<text x="46.002419" y="15.811871" class="__tooltip" id="__regionTooltip6">Hello!</text>
 			<circle
 			r="0.75"
 			cy="12.811871"
@@ -241,7 +241,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital6"
 			class="__republicMapRegionCapital" />
 
-			<text x="23.986332" y="1.45543027" class="__tooltip" id="__regionTooltip7">Hello!</text>
+			<text x="23.986332" y="3.45543027" class="__tooltip" id="__regionTooltip7">Hello!</text>
 			<circle
 			r="0.75"
 			cy="0.45543027"
@@ -249,7 +249,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital7"
 			class="__republicMapRegionCapital" />
 
-			<text x="18.183647" y="-3.328445" class="__tooltip" id="__regionTooltip8">Hello!</text>
+			<text x="18.183647" y="-5.328445" class="__tooltip" id="__regionTooltip8">Hello!</text>
 			<circle
 			r="0.75"
 			cy="-4.328445"
@@ -257,7 +257,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital8"
 			class="__republicMapRegionCapital" />
 
-			<text x="15.215368" y="0.94030071" class="__tooltip" id="__regionTooltip9">Hello!</text>
+			<text x="15.215368" y="-1.94030071" class="__tooltip" id="__regionTooltip9">Hello!</text>
 			<circle
 			r="0.75"
 			cy="-0.05969929"
@@ -265,7 +265,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital9"
 			class="__republicMapRegionCapital" />
 
-			<text x="15.68153" y="9.527464" class="__tooltip" id="__regionTooltip10">Hello!</text>
+			<text x="15.68153" y="7.527464" class="__tooltip" id="__regionTooltip10">Hello!</text>
 			<circle
 			r="0.75"
 			cy="8.5274649"
@@ -273,7 +273,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital10"
 			class="__republicMapRegionCapital" />
 			
-			<text x="11.72421" y="7.1804261" class="__tooltip" id="__regionTooltip11">Hello!</text>
+			<text x="11.72421" y="9.1804261" class="__tooltip" id="__regionTooltip11">Hello!</text>
 			<circle
 			r="0.75"
 			cy="6.1804261"
@@ -281,7 +281,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital11"
 			class="__republicMapRegionCapital" />
 
-			<text x="7.3059425" y="-5.7674918" class="__tooltip" id="__regionTooltip12"></text>
+			<text x="7.3059425" y="-6.7674918" class="__tooltip" id="__regionTooltip12"></text>
 			<circle
 			cy="-4.7674918"
 			cx="9.3059425"
@@ -297,7 +297,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital13"
 			class="__republicMapRegionCapital" />
 
-			<text x="28.273109" y="-11.650929" class="__tooltip" id="__regionTooltip14"></text>
+			<text x="28.273109" y="-12.650929" class="__tooltip" id="__regionTooltip14"></text>
 			<circle
 			r="0.75"
 			cy="-10.650929"
@@ -305,7 +305,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital14"
 			class="__republicMapRegionCapital" />
 
-			<text x="45.352699" y="-5.3729382" class="__tooltip" id="__regionTooltip15">Hello!</text>
+			<text x="45.352699" y="-7.5729382" class="__tooltip" id="__regionTooltip15">Hello!</text>
 			<circle
 			r="0.75"
 			cy="-6.3729382"
@@ -313,7 +313,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital15"
 			class="__republicMapRegionCapital" />
 
-			<text x="46.402607" y="-16.500271" class="__tooltip" id="__regionTooltip16">Hello!</text>
+			<text x="46.402607" y="-19.500271" class="__tooltip" id="__regionTooltip16">Hello!</text>
 			<circle
 			r="0.75"
 			cy="-17.500271"
@@ -321,7 +321,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital16"
 			class="__republicMapRegionCapital" />
 
-			<text x="56.334415" y="-51.537376" class="__tooltip" id="__regionTooltip17"></text>
+			<text x="56.334415" y="-55.537376" class="__tooltip" id="__regionTooltip17"></text>
 			<circle
 			r="0.75"
 			cy="-52.537376"
@@ -329,7 +329,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital17"
 			class="__republicMapRegionCapital" />
 
-			<text x="91.489883" y="-20.80307" class="__tooltip" id="__regionTooltip18">Hello!</text>
+			<text x="85.489883" y="-18.80307" class="__tooltip" id="__regionTooltip18">Hello!</text>
 			<circle
 			r="0.75"
 			cy="-21.80307"
@@ -337,7 +337,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital18"
 			class="__republicMapRegionCapital" />	
 			
-			<text x="66.774811" y="-3.6042175" class="__tooltip" id="__regionTooltip19">Hello!</text>
+			<text x="66.774811" y="-6.6042175" class="__tooltip" id="__regionTooltip19">Hello!</text>
 			<circle
 			r="0.75"
 			cy="-4.6042175"
@@ -345,7 +345,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital19"
 			class="__republicMapRegionCapital" />
 
-			<text x="68.408676" y="2.3868055" class="__tooltip" id="__regionTooltip20"></text>
+			<text x="68.408676" y="4.3868055" class="__tooltip" id="__regionTooltip20"></text>
 			<circle
 			r="0.75"
 			cy="1.3868055"
@@ -353,7 +353,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital20"
 			class="__republicMapRegionCapital" />
 
-			<text x="55.756378" y="5.3672671" class="__tooltip" id="__regionTooltip21">Hello!</text>
+			<text x="55.756378" y="2.8672671" class="__tooltip" id="__regionTooltip21">Hello!</text>
 			<circle
 			r="0.75"
 			cy="4.3672671"
@@ -361,7 +361,7 @@ function RepublicMap (svgId, hoverCallback, clickCallback, colorDictionary) {
 			id="__republicMapRegionCapital21"
 			class="__republicMapRegionCapital" />			
 
-			<text x="59.490749" y="14.929541" class="__tooltip" id="__regionTooltip22">Hello!</text>
+			<text x="59.490749" y="12.929541" class="__tooltip" id="__regionTooltip22">Hello!</text>
 			<circle
 			r="0.75"
 			cy="13.929541"
@@ -393,7 +393,7 @@ RepublicMap.prototype.enterPolygon = function (which)
 	region.css ('fill', this.__colorDictionary [which].hover);
 	
 	// Set tooltip content and show it.
-	regionTooltip.html (region.attr ('name'));
+	regionTooltip.html (region.attr ('capital'));
 	regionTooltip.css ("visibility", "visible");
 
 	//set text to html top header
@@ -425,7 +425,7 @@ RepublicMap.prototype.clickPolygon = function (which)
 
 	// Set tooltip content and show it.
 	region.css ('fill', this.__colorDictionary [which].clicked);
-	regionTooltip.html (region.attr ('name'));
+	regionTooltip.html (region.attr ('capital'));
 	regionTooltip.css ("visibility", "visible");
 
 	//set text to html top header
