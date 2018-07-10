@@ -398,7 +398,7 @@ RepublicMap.prototype.enterPolygon = function (which)
 
 	//set text to html top header
 	$ ("#__regionInfo #__name").html ($ ("#__republicMapDep" + which).attr ("name"));
-	$ ("#__regionInfo #__capital").html ($ ("#__republicMapDep"+ which).attr ("capital"));
+	//$ ("#__regionInfo #__capital").html ($ ("#__republicMapDep"+ which).attr ("capital"));
 
 	// Clear the other regions.
 	for (var idx = 1; idx <= 22; idx++) 
